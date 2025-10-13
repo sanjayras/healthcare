@@ -61,14 +61,14 @@ steps{
 '''
   sh 'minikube start'
   sh 'sleep 30'
-  sh 'sudo scp -o StrictHostKeyChecking=no -i ./terraform_files/sir.pem deployment.yml ubuntu@172.31.29.37:/home/ubuntu/'
-  sh 'sudo scp -o StrictHostKeyChecking=no -i ./terraform_files/sir.pem service.yml ubuntu@172.31.29.37:/home/ubuntu/'
+  sh 'sudo scp -o StrictHostKeyChecking=no -i ./terraform_files/bank.pem deployment.yml ubuntu@172.31.29.37:/home/ubuntu/'
+  sh 'sudo scp -o StrictHostKeyChecking=no -i ./terraform_files/bank.pem service.yml ubuntu@172.31.29.37:/home/ubuntu/'
 script{
   try{
-  sh 'ssh -o StrictHostKeyChecking=no -i ./terraform_files/sir.pem ubuntu@172.31.29.37 kubectl apply -f .'
+  sh 'ssh -o StrictHostKeyChecking=no -i ./terraform_files/bank.pem ubuntu@172.31.29.37 kubectl apply -f .'
   }catch(error)
   {
-  sh 'ssh -o StrictHostKeyChecking=no -i ./terraform_files/sir.pem ubuntu@172.31.29.37 kubectl apply -f .'
+  sh 'ssh -o StrictHostKeyChecking=no -i ./terraform_files/bank.pem ubuntu@172.31.29.37 kubectl apply -f .'
   }
 }
 }
