@@ -8,5 +8,5 @@ spec:
     app: healthproject
   ports:
     - protocol: TCP
-      port: 8082
+      port: 8081
       targetPort: http-web-app-01
