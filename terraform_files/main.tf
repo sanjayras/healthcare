@@ -10,7 +10,7 @@ resource "aws_instance" "k8-health-server" {
   ami                    = "ami-0bbdd8c17ed981ef9"
   instance_type          = "t3.medium"
   vpc_security_group_ids = ["sg-00fc35b46c299fc5b"]
-  key_name               = "sir"
+  key_name               = "bank"
 
   root_block_device {
     volume_size = 20
