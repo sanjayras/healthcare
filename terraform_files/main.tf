@@ -1,10 +1,6 @@
 provider "aws" {
-  region                   = "us-east-1"
-  profile                  = "default"
-  shared_credentials_files = ["/root/.aws/credentials"]
+  region = "us-east-1"
 }
-
-
 resource "aws_instance" "k8-health-server" {
   ami                    = "ami-0bbdd8c17ed981ef9"
   instance_type          = "t3.medium"
