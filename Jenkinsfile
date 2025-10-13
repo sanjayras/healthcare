@@ -43,6 +43,7 @@ pipeline {
         dir('terraform_files'){
           sh 'terraform init'
           sh 'terraform validate'
+          sh 'chmod 600 bank.pem'
           sh 'terraform apply --auto-approve'
           sh 'sleep 20'
         }
