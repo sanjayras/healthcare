@@ -32,5 +32,12 @@ pipeline {
         sh 'docker push sanjayras/healthcare:1.0'
             }
       } 
+    stage('AWS-Login') {
+      steps {
+        withCredentials([aws(accessKeyVariable: 'AWS_ACCESS_KEY_ID', credentialsId: 'aws_id', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY')]) {
+         }
+      }
+    }
+
   }
 }
