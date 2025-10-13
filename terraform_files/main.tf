@@ -4,7 +4,6 @@ provider "aws" {
   shared_credentials_files = ["/root/.aws/credentials"]
 }
 
-}
 
 resource "aws_instance" "k8-health-server" {
   ami                    = "ami-0bbdd8c17ed981ef9"
