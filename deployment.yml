@@ -3,16 +3,16 @@ kind: Deployment
 metadata:
   name: medicure-deployment-project
   labels:
-    app: health_project
+    app: healthproject
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: health_project
+      app: healthproject
   template:
     metadata:
       labels:
-        app: health_project
+        app: healthproject
     spec:
        containers:
          - name: medicure
